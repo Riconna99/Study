@@ -8,6 +8,13 @@ public class StringUtilsTest {
         String str=" abcd an";
         System.out.println(StringUtils.trimAllWhitespace(str));
 
+        System.out.println(StringUtils.isEmpty(null));//true
+        System.out.println(StringUtils.isEmpty(""));//true
+        System.out.println(StringUtils.isEmpty(" "));//false
+
+
+
+
 
     }
 
