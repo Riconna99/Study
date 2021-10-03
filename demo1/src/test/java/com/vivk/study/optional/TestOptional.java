@@ -1,7 +1,7 @@
 package com.vivk.study.optional;
 
 import com.vivk.study.stream.Employee;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 import java.util.Optional;
 

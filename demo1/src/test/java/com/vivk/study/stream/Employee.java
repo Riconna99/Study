@@ -46,7 +46,8 @@ public class Employee {
         this.salary = salary;
     }
 
-
+    public Employee() {
+    }
 
     @Override
     public boolean equals(Object o) {
