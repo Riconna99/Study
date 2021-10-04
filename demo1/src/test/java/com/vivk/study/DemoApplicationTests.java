@@ -26,12 +26,21 @@ class DemoApplicationTests {
     public void testInsert(){
 
         User user = new User();
-        user.setName("Helen");
+        user.setName("Mary2");
         user.setAge(18);
-        user.setEmail("55317332@qq.com");
-
+        user.setEmail("55312@qq.com");
         int result = userMapper.insert(user);
         System.out.println(result); //影响的行数
         System.out.println(user); //id自动回填
+    }
+    @Test
+    public void testUpdateById(){
+
+        User user = new User();
+        user.setId(1L);
+        user.setAge(88);
+
+        int result = userMapper.updateById(user);
+        System.out.println(result);
     }
 }
