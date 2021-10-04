@@ -1,4 +1,4 @@
-package com.vivk.study.lambda;
+package com.vivk.study.javase.lambda;
 
 public interface MyFunction2<T,R> {
     public R getValue(T t1,T t2);

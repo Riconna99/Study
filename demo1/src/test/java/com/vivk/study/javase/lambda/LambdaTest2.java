@@ -1,4 +1,4 @@
-package com.vivk.study.lambda;
+package com.vivk.study.javase.lambda;
 
 import org.junit.jupiter.api.Test;
 

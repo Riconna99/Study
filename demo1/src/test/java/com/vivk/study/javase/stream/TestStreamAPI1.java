@@ -1,7 +1,6 @@
-package com.vivk.study.stream;
+package com.vivk.study.javase.stream;
 
 import org.junit.jupiter.api.Test;
-import org.springframework.boot.autoconfigure.security.SecurityProperties;
 
 
 import java.util.ArrayList;

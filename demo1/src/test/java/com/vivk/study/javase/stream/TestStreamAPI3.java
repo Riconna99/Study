@@ -1,10 +1,9 @@
-package com.vivk.study.stream;
+package com.vivk.study.javase.stream;
 
 import org.junit.jupiter.api.Test;
 
 import java.util.*;
 import java.util.stream.Collectors;
-import java.util.stream.Stream;
 
 /**
  * 终止操作

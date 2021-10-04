@@ -1,4 +1,4 @@
-package com.vivk.study.stream;
+package com.vivk.study.javase.stream;
 
 import org.junit.jupiter.api.Test;
 

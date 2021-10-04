@@ -1,6 +1,6 @@
-package com.vivk.study.lambda;
+package com.vivk.study.javase.lambda;
 
-import com.vivk.study.stream.Employee;
+import com.vivk.study.javase.stream.Employee;
 import org.junit.jupiter.api.Test;
 
 import java.util.*;

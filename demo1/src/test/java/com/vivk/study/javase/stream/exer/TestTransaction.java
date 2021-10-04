@@ -1,4 +1,4 @@
-package com.vivk.study.stream.exer;
+package com.vivk.study.javase.stream.exer;
 
 import org.junit.Before;
 import org.junit.Test;

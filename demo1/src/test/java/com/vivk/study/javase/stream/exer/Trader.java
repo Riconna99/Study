@@ -1,4 +1,4 @@
-package com.vivk.study.stream.exer;
+package com.vivk.study.javase.stream.exer;
 //交易员类
 public class Trader {
 
