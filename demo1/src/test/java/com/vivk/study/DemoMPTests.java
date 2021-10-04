@@ -1,6 +1,8 @@
 package com.vivk.study;
 
+import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
+import com.sun.javafx.scene.control.behavior.SliderBehavior;
 import com.vivk.study.entity.User;
 import com.vivk.study.mapper.UserMapper;
 import org.junit.jupiter.api.Test;
@@ -12,7 +14,7 @@ import java.util.HashMap;
 import java.util.List;
 
 @SpringBootTest
-class DemoApplicationTests {
+class DemoMPTests {
 
     @Autowired
     private UserMapper userMapper;
@@ -29,7 +31,7 @@ class DemoApplicationTests {
     public void testInsert(){
 
         User user = new User();
-        user.setName("岳不群");
+        user.setName("岳不群23");
         user.setAge(60);
         user.setEmail("55312@qq.com");
         int result = userMapper.insert(user);
@@ -106,5 +108,49 @@ class DemoApplicationTests {
         int result = userMapper.deleteBatchIds(Arrays.asList(1444880921019203585L,1444897237482524674l));
         System.out.println(result);
     }
+    //mp实现复杂查询操作
+    @Test
+    public void testSelectQuery(){
+        //创建Query对象
+        QueryWrapper<User> wrapper = new QueryWrapper<>();
+        //通过QueryWrapper设置条件
+        //ge=greater equal、gt=greater than、le=less equal、lt=less than
+
+        //查询age>=30记录
+        //wrapper.ge("age",30);
+
+        //eq、ne
+        //wrapper.eq("name","岳不群23");
+
+        //between
+        //查询年龄在20-30记录
+        //wrapper.between("age",20,30);
+
+        //like
+        //wrapper.like("name","岳");
+
+        //orderByDesc
+        //wrapper.orderByDesc("id");
+
+        //last 直接拼接到sql最后
+        //wrapper.last("limit 1");
+
+        //指定要查询的列
+        wrapper.select("id","name");
+
+        List<User> users = userMapper.selectList(wrapper);
+        System.out.println(users);
+    }
+
+
+
+
+
+
+
+
+
+
+
 
 }
