@@ -26,8 +26,8 @@ class DemoApplicationTests {
     public void testInsert(){
 
         User user = new User();
-        user.setName("Mary2");
-        user.setAge(18);
+        user.setName("东方不败");
+        user.setAge(60);
         user.setEmail("55312@qq.com");
         int result = userMapper.insert(user);
         System.out.println(result); //影响的行数
@@ -42,5 +42,19 @@ class DemoApplicationTests {
 
         int result = userMapper.updateById(user);
         System.out.println(result);
+    }
+    /**
+     * 测试 乐观锁插件
+     */
+    @Test
+    public void testOptimisticLocker() {
+
+        //查询
+        User user = userMapper.selectById(1444948783046021122L);
+        //修改数据
+        user.setName("Helen Yao");
+        user.setEmail("helen@qq.com");
+        //执行更新
+        userMapper.updateById(user);
     }
 }
