@@ -29,7 +29,7 @@ class DemoApplicationTests {
     public void testInsert(){
 
         User user = new User();
-        user.setName("东方不败");
+        user.setName("岳不群");
         user.setAge(60);
         user.setEmail("55312@qq.com");
         int result = userMapper.insert(user);
@@ -94,4 +94,17 @@ class DemoApplicationTests {
         System.out.println(page.hasNext());//是否有下一页
         System.out.println(page.hasPrevious());//是否有上一页
     }
+    //删除操作 物理删除
+    @Test
+    public void testDeleteById(){
+        int result = userMapper.deleteById(1444993154034409474L);
+        System.out.println(result);
+    }
+    //批量删除
+    @Test
+    public void testDeleteByBatchId(){
+        int result = userMapper.deleteBatchIds(Arrays.asList(1444880921019203585L,1444897237482524674l));
+        System.out.println(result);
+    }
+
 }
