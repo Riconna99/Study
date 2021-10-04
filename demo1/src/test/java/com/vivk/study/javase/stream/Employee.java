@@ -8,6 +8,9 @@ public class Employee {
     private Double salary;
     private Status status;
 
+    public Employee(Integer integer, Integer integer1) {
+    }
+
     public String getName() {
         return name;
     }
@@ -47,6 +50,14 @@ public class Employee {
     }
 
     public Employee() {
+    }
+
+    public Employee(String name) {
+        this.name = name;
+    }
+
+    public Employee(Integer age) {
+        this.age = age;
     }
 
     @Override
